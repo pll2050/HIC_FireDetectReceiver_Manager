@@ -1,0 +1,51 @@
+﻿<Page x:Class="HIC_FireDetectReceiver_Manager.Pages.InOut"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HIC_FireDetectReceiver_Manager"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="inout">
+    <Page.Resources>
+        <local:Alarm_In_Table x:Key="resAlarmIn_Table" />
+        <CollectionViewSource x:Key="xAlarm_In_Table" Source="{StaticResource resAlarmIn_Table}" />
+
+        <local:Alarm_Out_Table x:Key="resAlarmOut_Table" />
+        <CollectionViewSource x:Key="xAlarm_Out_Table" Source="{StaticResource resAlarmOut_Table}" />
+    </Page.Resources>
+    <Grid>
+        <Grid>
+            <TabControl Margin="5">
+                <TabItem Header="입력 알람">
+                    <DataGrid x:Name="DataGrid_AlarmIn" ItemsSource="{Binding Source={StaticResource xAlarm_In_Table}}" CanUserAddRows="True" CanUserSortColumns="False" AutoGenerateColumns="False" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="보드번호"  Binding="{Binding mBoardNo}"/>
+                            <DataGridTextColumn Header="회로"  Binding="{Binding mCircuit}"/>
+                            <DataGridTextColumn Header="코드"  Binding="{Binding mCode}"/>
+                            <DataGridTextColumn Header="메세지1"  Binding="{Binding mMassage1}"/>
+                            <DataGridTextColumn Header="메세지2"  Binding="{Binding mMassage2}" />
+                            <DataGridTextColumn Header="메세지3"  Binding="{Binding mMassage3}" />
+                            <DataGridTextColumn Header="메세지4"  Binding="{Binding mMassage4}" />
+                            <DataGridTextColumn Header="층화재제어"  Binding="{Binding mControl1}" />
+                            <DataGridTextColumn Header="설비제어"  Binding="{Binding mControl2}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+                <TabItem Header="출력 알람">
+                    <DataGrid x:Name="DataGrid_AlarmOut" ItemsSource="{Binding Source={StaticResource xAlarm_Out_Table}}" CanUserAddRows="True" CanUserSortColumns="False" AutoGenerateColumns="False" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="보드번호"  Binding="{Binding mBoardNo}"/>
+                            <DataGridTextColumn Header="회로"  Binding="{Binding mCircuit}"/>
+                            <DataGridTextColumn Header="메세지1"  Binding="{Binding mMassage1}"/>
+                            <DataGridTextColumn Header="메세지2"  Binding="{Binding mMassage2}" />
+                            <DataGridTextColumn Header="메세지3"  Binding="{Binding mMassage3}" />
+                            <DataGridTextColumn Header="메세지4"  Binding="{Binding mMassage4}" />
+                            <DataGridTextColumn Header="층화재제어"  Binding="{Binding mPushStop}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </Grid>
+</Page>

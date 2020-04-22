@@ -1,0 +1,112 @@
+﻿<Page x:Class="HIC_FireDetectReceiver_Manager.Pages.Tab_Device"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HIC_FireDetectReceiver_Manager.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+      Title="Tab_Device">
+
+    <Grid>
+        <Border>
+            <DockPanel Margin="0">
+                <StackPanel>
+                    <materialDesign:Card Padding="32" Margin="16">
+                        <GroupBox Header="Device Setting">
+                            <StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="2">
+                                    <TextBlock Text="Device ID :" Margin="0,0,5,0"/>
+                                    <TextBox Name="txb_DEVICEID" Width="50"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="2">
+                                    <StackPanel Orientation="Horizontal" Margin="2">
+                                        <TextBlock Text="Sensor Boards :" Margin="0,0,5,0"/>
+                                        <TextBox Name="txb_SEN_BOARDS" Width="50"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="2">
+                                        <TextBlock Text="Relay Boards :" Margin="0,0,5,0"/>
+                                        <TextBox Name="txb_REL_BOARDS" Width="50"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="2">
+                                        <TextBlock Text="Display Boards :" Margin="0,0,5,0"/>
+                                        <TextBox Name="txb_DIS_BOARDS" Width="50"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="2">
+                                        <TextBlock Text="ONOFF Boards :" Margin="0,0,5,0"/>
+                                        <TextBox Name="txb_onoff_BOARDS" Width="50"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="2">
+                                        <TextBlock Text="Auto Boards :" Margin="0,0,5,0"/>
+                                        <TextBox Name="txb_auto_BOARDS" Width="50"/>
+                                    </StackPanel>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="2">
+                                    <StackPanel Orientation="Horizontal" Margin="2">
+                                        <TextBlock Text="HMI_PHNUM :" Margin="0,0,5,0"/>
+                                        <TextBox Name="txb_HMI_PHNUM" Width="150"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="2">
+                                        <TextBlock Text="MY_CDMANUM :" Margin="0,0,5,0"/>
+                                        <TextBox Name="txb_MY_CDMANUM" Width="150"/>
+                                    </StackPanel>
+
+                                </StackPanel>
+
+                            </StackPanel>
+                        </GroupBox>
+
+                    </materialDesign:Card>
+
+                    <materialDesign:Card Padding="32" Margin="16">
+
+                        <GroupBox Header="Smart Phone" >
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel Orientation="Vertical">
+                                    <StackPanel Orientation="Horizontal" Margin="2">
+                                        <TextBlock Text="Smart Phone Count :" Margin="0,0,5,0"/>
+                                        <TextBox Name="txb_SM_cnt" Width="30"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="2">
+                                        <TextBlock Text="Number1 :" Margin="0,0,5,0"/>
+                                        <TextBox Name="txb_SM_num1" Width="150"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="2">
+                                        <TextBlock Text="Number2 :" Margin="0,0,5,0"/>
+                                        <TextBox Name="txb_SM_num2" Width="150"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="2">
+                                        <TextBlock Text="Number3 :" Margin="0,0,5,0"/>
+                                        <TextBox Name="txb_SM_num3" Width="150"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="2">
+                                        <TextBlock Text="Number4 :" Margin="0,0,5,0"/>
+                                        <TextBox Name="txb_SM_num4" Width="150"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="2">
+                                        <TextBlock Text="Number5 :" Margin="0,0,5,0"/>
+                                        <TextBox Name="txb_SM_num5" Width="150"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+                    </materialDesign:Card>
+
+                </StackPanel>
+
+            </DockPanel>
+
+        </Border>
+    </Grid>
+</Page>

@@ -1,0 +1,49 @@
+﻿<Page x:Class="HIC_FireDetectReceiver_Manager.Pages.Tab_Broad"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HIC_FireDetectReceiver_Manager"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Tab_Broad">
+    <Page.Resources>
+        <local:AreaAlarm_Table x:Key="resAreaAlarm_Table" />
+        <CollectionViewSource x:Key="xAreaAlarm_Table" Source="{StaticResource resAreaAlarm_Table}" />
+
+        <local:EmergencyAlarm_Table x:Key="resEmergencyAlarm_Table" />
+        <CollectionViewSource x:Key="xEmergencyAlarm_Table" Source="{StaticResource resEmergencyAlarm_Table}" />
+    </Page.Resources>
+    <Grid>
+        <TabControl Margin="5">
+            <TabItem Name="Voice_Alarm" Header="지구음향 제어">
+                <DataGrid x:Name="DataGrid_AreaAlarm" ItemsSource="{Binding Source={StaticResource xAreaAlarm_Table}}" CanUserAddRows="True" CanUserSortColumns="False" AutoGenerateColumns="False" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="제어번호"  Binding="{Binding mControlNo}"/>
+                        <DataGridTextColumn Header="경보입력"  Binding="{Binding mEmerg_input}"/>
+                        <DataGridTextColumn Header="메세지1"  Binding="{Binding mMassage1}"/>
+                        <DataGridTextColumn Header="메세지2"  Binding="{Binding mMassage2}" />
+                        <DataGridTextColumn Header="메세지3"  Binding="{Binding mMassage3}" />
+                        <DataGridTextColumn Header="메세지4"  Binding="{Binding mMassage4}" />
+                        <DataGridTextColumn Header="화재층제어"  Binding="{Binding mFireFloor}" />
+                        <DataGridTextColumn Header="직상층제어"  Binding="{Binding mTopFloor}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Name="Emergency_Alarm" Header="비상방송 제어">
+                <DataGrid x:Name="DataGrid_EmergencyAlarm" ItemsSource="{Binding Source={StaticResource xEmergencyAlarm_Table}}" CanUserAddRows="True" CanUserSortColumns="False" AutoGenerateColumns="False" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="제어번호"  Binding="{Binding mControlNo}"/>
+                        <DataGridTextColumn Header="경보입력"  Binding="{Binding mEmerg_input}"/>
+                        <DataGridTextColumn Header="메세지1"  Binding="{Binding mMassage1}"/>
+                        <DataGridTextColumn Header="메세지2"  Binding="{Binding mMassage2}" />
+                        <DataGridTextColumn Header="메세지3"  Binding="{Binding mMassage3}" />
+                        <DataGridTextColumn Header="메세지4"  Binding="{Binding mMassage4}" />
+                        <DataGridTextColumn Header="화재층제어"  Binding="{Binding mFireFloor}" />
+                        <DataGridTextColumn Header="직상층제어"  Binding="{Binding mTopFloor}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>
