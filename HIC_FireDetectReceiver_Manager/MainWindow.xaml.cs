@@ -64,11 +64,12 @@ namespace HIC_FireDetectReceiver_Manager
         private void btn_Serial_Close_Click(object sender, RoutedEventArgs e)
         {
             Helper.Serial serial = new Helper.Serial();
-
+            serial.Buffer_Clear();
             if (serial.Close())
             {
                 tb_status.Text = "Disconnected";
                 btn_status_change();
+                serial.Dispose();
             }
         }
 
@@ -80,22 +81,20 @@ namespace HIC_FireDetectReceiver_Manager
             btn_Serial_Write.IsEnabled = !btn_Serial_Write.IsEnabled;
             btn_export.IsEnabled = !btn_export.IsEnabled;
             btn_import.IsEnabled = !btn_import.IsEnabled;
+            cb_BoudRate.IsEnabled = !cb_BoudRate.IsEnabled;
+            cb_SerialPort.IsEnabled = !cb_SerialPort.IsEnabled;
         }
 
         private void btn_Serial_Write_Click(object sender, RoutedEventArgs e)
         {
             Helper.Serial serial = new Helper.Serial();
             serial.Write("$man_write");
-            //serial.Write("man_write");
-
         }
 
         private void btn_Serial_Read_Click(object sender, RoutedEventArgs e)
         {
             Helper.Serial serial = new Helper.Serial();
             serial.Write("$man_read");
-            //serial.Write("man_read");
-            
         }
         private void btn_export_Click(object sender, RoutedEventArgs e)
         {
@@ -131,9 +130,7 @@ namespace HIC_FireDetectReceiver_Manager
             string tmp_str = "";
             this.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority.Normal, new Action(delegate
             {
-                string test1 = txb_DEVICEID.Text;
-
-                string split_str = "/";
+                string split_str = ",";
                 tmp_str += txb_DEVICEID.Text + split_str;
                 tmp_str += txb_HMI_PHNUM.Text + split_str;
                 tmp_str += txb_MY_CDMANUM.Text + split_str;
@@ -168,13 +165,13 @@ namespace HIC_FireDetectReceiver_Manager
 
                 if ((get_sRecvData != string.Empty)) // && (g_sRecvData.Contains('\n')))
                 {
-                    serial_buffer += get_sRecvData + "/";
+                    serial_buffer += get_sRecvData;
 
                     if (get_sRecvData.Contains("$e"))
                     {
-                        //serial_buffer += get_sRecvData;
                         SetText(serial_buffer);
                         serial_buffer = String.Empty;
+                        //serial.Buffer_Clear();
                     }
                     else if (get_sRecvData.Contains("$mw"))
                     {
@@ -185,15 +182,18 @@ namespace HIC_FireDetectReceiver_Manager
                     {
                         System.Windows.MessageBox.Show("읽기 완료");
                         serial_buffer = String.Empty;
+                        serial.Buffer_Clear();
                     }
                     else if (get_sRecvData.Contains("$complate"))
                     {
                         System.Windows.MessageBox.Show("쓰기 완료");
                         serial_buffer = String.Empty;
+                        serial.Buffer_Clear();
                     }
                     else if (get_sRecvData.Contains("$ce"))
                     {
                         serial_buffer = String.Empty;
+                        serial.Buffer_Clear();
                     }
                 }
             }
@@ -207,7 +207,7 @@ namespace HIC_FireDetectReceiver_Manager
 
         private void SetText(string text)
         {
-            string[] split_text = text.Split('/');
+            string[] split_text = text.Split(',');
             Global_Variable.oP2000_Data.DEVICE_ID = split_text[0];
             Global_Variable.oP2000_Data.HMI_PHNUM = split_text[1];
             Global_Variable.oP2000_Data.MY_CDMANUM = split_text[2];
@@ -252,16 +252,7 @@ namespace HIC_FireDetectReceiver_Manager
                 txb_DIS_BOARDS.Text = Global_Variable.oP2000_Data.DISPLAY_BOARDS;
                 txb_onoff_BOARDS.Text = Global_Variable.oP2000_Data.ONOFF_BOARDS;
                 txb_auto_BOARDS.Text = Global_Variable.oP2000_Data.AUTO_BOARDS;
-            }
-                ));
-        }
-
-        private void btn_test_Click(object sender, RoutedEventArgs e)
-        {
-            if (Global_Variable.oP2000_Data.DEVICE_ID.ToString() != null)
-            {
-                System.Windows.MessageBox.Show(Global_Variable.oP2000_Data.DEVICE_ID.ToString());
-            }
+            }));
         }
     }
 }

@@ -41,10 +41,27 @@ namespace HIC_FireDetectReceiver_Manager.Helper
 
         public string Read()
         {
+            string tmp_receive = string.Empty;
             //string tmp_receive = Global_Variable.oSP.ReadExisting();
-            string tmp_receive = Global_Variable.oSP.ReadLine();
+            //while (!(Global_Variable.oSP.ReadLine().Contains(end_str)))
+            //{
+            //    tmp_receive += Global_Variable.oSP.ReadLine() + "/";
+            //}
+            tmp_receive = Global_Variable.oSP.ReadLine();
+            //tmp_receive = Global_Variable.oSP.ReadExisting();
             return tmp_receive;
 
+        }
+
+        public void Dispose()
+        {
+            Global_Variable.oSP.Dispose();
+        }
+
+        public void Buffer_Clear()
+        {
+            Global_Variable.oSP.DiscardInBuffer();
+            Global_Variable.oSP.DiscardOutBuffer();
         }
     }
 }

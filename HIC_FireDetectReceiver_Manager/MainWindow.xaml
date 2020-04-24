@@ -201,10 +201,6 @@
 
                     </Border>
                 </TabItem>
-
-                <!--<TabItem Name="tab_device" Header="디바이스 정보" >
-                    <Frame Name="frame_device" Source="Pages/Tab_Device.xaml" />
-                </TabItem>-->
                 <TabItem Name="tab_inout" Header="입출력 명세서" >
                     <Frame Name="frame_inout" Source="Pages/Tab_InOut.xaml" />
                 </TabItem>
