@@ -210,6 +210,12 @@
                 <TabItem Name="tab_broad" Header="경보출력제어" >
                     <Frame Name="frame_broad" Source="Pages/Tab_Broad.xaml" />
                 </TabItem>
+                <TabItem Name="tab_draw" Header="다이어그램" >
+                    <Frame Name="frame_draw" Source="Pages/Tab_Draw.xaml" />
+                </TabItem>
+                <TabItem Name="tab_map" Header="지도" >
+                    <Frame Name="frame_map" Source="Pages/Tab_Map.xaml" />
+                </TabItem>
             </TabControl>
 
         </DockPanel>

@@ -207,24 +207,24 @@ namespace HIC_FireDetectReceiver_Manager
 
         private void SetText(string text)
         {
-            string[] split_text = text.Split(',');
-            Global_Variable.oP2000_Data.DEVICE_ID = split_text[0];
-            Global_Variable.oP2000_Data.HMI_PHNUM = split_text[1];
-            Global_Variable.oP2000_Data.MY_CDMANUM = split_text[2];
-            Global_Variable.oP2000_Data.SMART_PHNUMS = split_text[3];
-            Global_Variable.oP2000_Data.SMART_PHNUM0 = split_text[4];
-            Global_Variable.oP2000_Data.SMART_PHNUM1 = split_text[5];
-            Global_Variable.oP2000_Data.SMART_PHNUM2 = split_text[6];
-            Global_Variable.oP2000_Data.SMART_PHNUM3 = split_text[7];
-            Global_Variable.oP2000_Data.SMART_PHNUM4 = split_text[8];
-            Global_Variable.oP2000_Data.SENSOR_BOARDS = split_text[9];
-            Global_Variable.oP2000_Data.RELAY_BOARDS = split_text[10];
-            Global_Variable.oP2000_Data.DISPLAY_BOARDS = split_text[11];
-            Global_Variable.oP2000_Data.ONOFF_BOARDS = split_text[12];
-            Global_Variable.oP2000_Data.AUTO_BOARDS = split_text[13];
-
             try
             {
+                string[] split_text = text.Split(',');
+                Global_Variable.oP2000_Data.DEVICE_ID = split_text[0];
+                Global_Variable.oP2000_Data.HMI_PHNUM = split_text[1];
+                Global_Variable.oP2000_Data.MY_CDMANUM = split_text[2];
+                Global_Variable.oP2000_Data.SMART_PHNUMS = split_text[3];
+                Global_Variable.oP2000_Data.SMART_PHNUM0 = split_text[4];
+                Global_Variable.oP2000_Data.SMART_PHNUM1 = split_text[5];
+                Global_Variable.oP2000_Data.SMART_PHNUM2 = split_text[6];
+                Global_Variable.oP2000_Data.SMART_PHNUM3 = split_text[7];
+                Global_Variable.oP2000_Data.SMART_PHNUM4 = split_text[8];
+                Global_Variable.oP2000_Data.SENSOR_BOARDS = split_text[9];
+                Global_Variable.oP2000_Data.RELAY_BOARDS = split_text[10];
+                Global_Variable.oP2000_Data.DISPLAY_BOARDS = split_text[11];
+                Global_Variable.oP2000_Data.ONOFF_BOARDS = split_text[12];
+                Global_Variable.oP2000_Data.AUTO_BOARDS = split_text[13];
+
                 Mapping_Data();
             }
             catch (Exception ex)

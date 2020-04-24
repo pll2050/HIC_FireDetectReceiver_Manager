@@ -73,15 +73,22 @@
     <Compile Include="Pages\Tab_Broad.xaml.cs">
       <DependentUpon>Tab_Broad.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Tab_Draw.xaml.cs">
+      <DependentUpon>Tab_Draw.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Tab_InOut.xaml.cs">
       <DependentUpon>Tab_InOut.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Tab_Device.xaml.cs">
       <DependentUpon>Tab_Device.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Tab_Map.xaml.cs">
+      <DependentUpon>Tab_Map.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Tab_OutGroup.xaml.cs">
       <DependentUpon>Tab_OutGroup.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Src\DrawModel.cs" />
     <Compile Include="Src\Serial_Provision.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -101,11 +108,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Tab_Draw.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Tab_InOut.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Tab_Device.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Tab_Map.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -170,7 +185,24 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Downloads\NetworkViewSampleCode\NetworkViewSampleCode\AdornedControl\AdornedControl.2010.csproj">
+      <Project>{94b81cb7-f8a6-44bc-bd71-e927f701e0d8}</Project>
+      <Name>AdornedControl.2010</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Downloads\NetworkViewSampleCode\NetworkViewSampleCode\NetworkUI\NetworkUI.2010.csproj">
+      <Project>{b7ca1480-c144-40ac-ab97-a626f800d5b4}</Project>
+      <Name>NetworkUI.2010</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Downloads\NetworkViewSampleCode\NetworkViewSampleCode\SimpleSample\NetworkModel\SimpleNetworkModel.2010.csproj">
+      <Project>{b855bff4-4537-446f-ad26-5392296a248e}</Project>
+      <Name>SimpleNetworkModel.2010</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Downloads\NetworkViewSampleCode\NetworkViewSampleCode\Utils\Utils.2010.csproj">
+      <Project>{e7d6707b-d6ef-4fa8-9374-dc3b7d3cdfd6}</Project>
+      <Name>Utils.2010</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.3.1.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.1.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
