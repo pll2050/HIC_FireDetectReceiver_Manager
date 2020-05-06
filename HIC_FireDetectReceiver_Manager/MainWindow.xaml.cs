@@ -128,25 +128,26 @@ namespace HIC_FireDetectReceiver_Manager
         private string TransferData()
         {
             string tmp_str = "";
-            this.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority.Normal, new Action(delegate
-            {
-                string split_str = ",";
-                tmp_str += txb_DEVICEID.Text + split_str;
-                tmp_str += txb_HMI_PHNUM.Text + split_str;
-                tmp_str += txb_MY_CDMANUM.Text + split_str;
-                tmp_str += txb_SM_cnt.Text + split_str;
-                tmp_str += txb_SM_num1.Text + split_str;
-                tmp_str += txb_SM_num2.Text + split_str;
-                tmp_str += txb_SM_num3.Text + split_str;
-                tmp_str += txb_SM_num4.Text + split_str;
-                tmp_str += txb_SM_num5.Text + split_str;
+            this.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority.Normal,
+                new Action(delegate
+                {
+                    string split_str = ",";
+                    tmp_str += txb_DEVICEID.Text + split_str;
+                    tmp_str += txb_HMI_PHNUM.Text + split_str;
+                    tmp_str += txb_MY_CDMANUM.Text + split_str;
+                    tmp_str += txb_SM_cnt.Text + split_str;
+                    tmp_str += txb_SM_num1.Text + split_str;
+                    tmp_str += txb_SM_num2.Text + split_str;
+                    tmp_str += txb_SM_num3.Text + split_str;
+                    tmp_str += txb_SM_num4.Text + split_str;
+                    tmp_str += txb_SM_num5.Text + split_str;
 
-                tmp_str += txb_SEN_BOARDS.Text + split_str;
-                tmp_str += txb_REL_BOARDS.Text + split_str;
-                tmp_str += txb_DIS_BOARDS.Text + split_str;
-                tmp_str += txb_onoff_BOARDS.Text + split_str;
-                tmp_str += txb_auto_BOARDS.Text;
-            }));
+                    tmp_str += txb_SEN_BOARDS.Text + split_str;
+                    tmp_str += txb_REL_BOARDS.Text + split_str;
+                    tmp_str += txb_DIS_BOARDS.Text + split_str;
+                    tmp_str += txb_onoff_BOARDS.Text + split_str;
+                    tmp_str += txb_auto_BOARDS.Text;
+                }));
 
 
             return tmp_str;
@@ -235,24 +236,25 @@ namespace HIC_FireDetectReceiver_Manager
         }
         public void Mapping_Data()
         {
-            this.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority.Normal, new Action(delegate
-            {
-                txb_DEVICEID.Text = Global_Variable.oP2000_Data.DEVICE_ID;
-                txb_HMI_PHNUM.Text = Global_Variable.oP2000_Data.HMI_PHNUM;
-                txb_MY_CDMANUM.Text = Global_Variable.oP2000_Data.MY_CDMANUM;
-                txb_SM_cnt.Text = Global_Variable.oP2000_Data.SMART_PHNUMS;
-                txb_SM_num1.Text = Global_Variable.oP2000_Data.SMART_PHNUM0;
-                txb_SM_num2.Text = Global_Variable.oP2000_Data.SMART_PHNUM1;
-                txb_SM_num3.Text = Global_Variable.oP2000_Data.SMART_PHNUM2;
-                txb_SM_num4.Text = Global_Variable.oP2000_Data.SMART_PHNUM3;
-                txb_SM_num5.Text = Global_Variable.oP2000_Data.SMART_PHNUM4;
+            this.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority.Normal,
+                new Action(delegate
+                {
+                    txb_DEVICEID.Text = Global_Variable.oP2000_Data.DEVICE_ID;
+                    txb_HMI_PHNUM.Text = Global_Variable.oP2000_Data.HMI_PHNUM;
+                    txb_MY_CDMANUM.Text = Global_Variable.oP2000_Data.MY_CDMANUM;
+                    txb_SM_cnt.Text = Global_Variable.oP2000_Data.SMART_PHNUMS;
+                    txb_SM_num1.Text = Global_Variable.oP2000_Data.SMART_PHNUM0;
+                    txb_SM_num2.Text = Global_Variable.oP2000_Data.SMART_PHNUM1;
+                    txb_SM_num3.Text = Global_Variable.oP2000_Data.SMART_PHNUM2;
+                    txb_SM_num4.Text = Global_Variable.oP2000_Data.SMART_PHNUM3;
+                    txb_SM_num5.Text = Global_Variable.oP2000_Data.SMART_PHNUM4;
 
-                txb_SEN_BOARDS.Text = Global_Variable.oP2000_Data.SENSOR_BOARDS;
-                txb_REL_BOARDS.Text = Global_Variable.oP2000_Data.RELAY_BOARDS;
-                txb_DIS_BOARDS.Text = Global_Variable.oP2000_Data.DISPLAY_BOARDS;
-                txb_onoff_BOARDS.Text = Global_Variable.oP2000_Data.ONOFF_BOARDS;
-                txb_auto_BOARDS.Text = Global_Variable.oP2000_Data.AUTO_BOARDS;
-            }));
+                    txb_SEN_BOARDS.Text = Global_Variable.oP2000_Data.SENSOR_BOARDS;
+                    txb_REL_BOARDS.Text = Global_Variable.oP2000_Data.RELAY_BOARDS;
+                    txb_DIS_BOARDS.Text = Global_Variable.oP2000_Data.DISPLAY_BOARDS;
+                    txb_onoff_BOARDS.Text = Global_Variable.oP2000_Data.ONOFF_BOARDS;
+                    txb_auto_BOARDS.Text = Global_Variable.oP2000_Data.AUTO_BOARDS;
+                }));
         }
     }
 }

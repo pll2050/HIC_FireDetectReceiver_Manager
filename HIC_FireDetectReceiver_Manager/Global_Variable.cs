@@ -20,7 +20,6 @@ namespace HIC_FireDetectReceiver_Manager
         public static AreaAlarm_Table oAreaAlarm_Table = new AreaAlarm_Table();
         public static EmergencyAlarm_Table oEmergencyAlarm_Table = new EmergencyAlarm_Table();
 
-        public static string test;
         public static SerialPort oSP;
     }
 }

@@ -213,9 +213,9 @@
                 <TabItem Name="tab_draw" Header="다이어그램" >
                     <Frame Name="frame_draw" Source="Pages/Tab_Draw.xaml" />
                 </TabItem>
-                <TabItem Name="tab_map" Header="지도" >
+                <!--<TabItem Name="tab_map" Header="지도" >
                     <Frame Name="frame_map" Source="Pages/Tab_Map.xaml" />
-                </TabItem>
+                </TabItem>-->
             </TabControl>
 
         </DockPanel>
