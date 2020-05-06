@@ -5,6 +5,7 @@ VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HIC_FireDetectReceiver_Manager", "HIC_FireDetectReceiver_Manager\HIC_FireDetectReceiver_Manager.csproj", "{97A056A5-A8DA-4FE3-8EDB-8CDDFAFE753A}"
 	ProjectSection(ProjectDependencies) = postProject
+		{E7D6707B-D6EF-4FA8-9374-DC3B7D3CDFD6} = {E7D6707B-D6EF-4FA8-9374-DC3B7D3CDFD6}
 		{B7CA1480-C144-40AC-AB97-A626F800D5B4} = {B7CA1480-C144-40AC-AB97-A626F800D5B4}
 		{94B81CB7-F8A6-44BC-BD71-E927F701E0D8} = {94B81CB7-F8A6-44BC-BD71-E927F701E0D8}
 		{B855BFF4-4537-446F-AD26-5392296A248E} = {B855BFF4-4537-446F-AD26-5392296A248E}
@@ -15,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleNetworkModel.2010", "NetworkModel\SimpleNetworkModel.2010.csproj", "{B855BFF4-4537-446F-AD26-5392296A248E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkUI.2010", "NetworkUI\NetworkUI.2010.csproj", "{B7CA1480-C144-40AC-AB97-A626F800D5B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils.2010", "Utils\Utils.2010.csproj", "{E7D6707B-D6EF-4FA8-9374-DC3B7D3CDFD6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +41,10 @@ Global
 		{B7CA1480-C144-40AC-AB97-A626F800D5B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7CA1480-C144-40AC-AB97-A626F800D5B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7CA1480-C144-40AC-AB97-A626F800D5B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7D6707B-D6EF-4FA8-9374-DC3B7D3CDFD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7D6707B-D6EF-4FA8-9374-DC3B7D3CDFD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7D6707B-D6EF-4FA8-9374-DC3B7D3CDFD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7D6707B-D6EF-4FA8-9374-DC3B7D3CDFD6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -98,6 +98,12 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utils\Utils.2010.csproj">
+      <Project>{e7d6707b-d6ef-4fa8-9374-dc3b7d3cdfd6}</Project>
+      <Name>Utils.2010</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
