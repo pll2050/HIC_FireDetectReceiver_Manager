@@ -11,13 +11,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HIC_FireDetectReceiver_Mana
 		{B855BFF4-4537-446F-AD26-5392296A248E} = {B855BFF4-4537-446F-AD26-5392296A248E}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdornedControl.2010", "AdornedControl\AdornedControl.2010.csproj", "{94B81CB7-F8A6-44BC-BD71-E927F701E0D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdornedControl", "AdornedControl\AdornedControl.csproj", "{94B81CB7-F8A6-44BC-BD71-E927F701E0D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleNetworkModel.2010", "NetworkModel\SimpleNetworkModel.2010.csproj", "{B855BFF4-4537-446F-AD26-5392296A248E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleNetworkModel", "NetworkModel\SimpleNetworkModel.csproj", "{B855BFF4-4537-446F-AD26-5392296A248E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkUI.2010", "NetworkUI\NetworkUI.2010.csproj", "{B7CA1480-C144-40AC-AB97-A626F800D5B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkUI", "NetworkUI\NetworkUI.csproj", "{B7CA1480-C144-40AC-AB97-A626F800D5B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils.2010", "Utils\Utils.2010.csproj", "{E7D6707B-D6EF-4FA8-9374-DC3B7D3CDFD6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{E7D6707B-D6EF-4FA8-9374-DC3B7D3CDFD6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

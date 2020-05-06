@@ -192,21 +192,21 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AdornedControl\AdornedControl.2010.csproj">
+    <ProjectReference Include="..\AdornedControl\AdornedControl.csproj">
       <Project>{94b81cb7-f8a6-44bc-bd71-e927f701e0d8}</Project>
-      <Name>AdornedControl.2010</Name>
+      <Name>AdornedControl</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NetworkModel\SimpleNetworkModel.2010.csproj">
+    <ProjectReference Include="..\NetworkModel\SimpleNetworkModel.csproj">
       <Project>{b855bff4-4537-446f-ad26-5392296a248e}</Project>
-      <Name>SimpleNetworkModel.2010</Name>
+      <Name>SimpleNetworkModel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NetworkUI\NetworkUI.2010.csproj">
+    <ProjectReference Include="..\NetworkUI\NetworkUI.csproj">
       <Project>{b7ca1480-c144-40ac-ab97-a626f800d5b4}</Project>
-      <Name>NetworkUI.2010</Name>
+      <Name>NetworkUI</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Utils\Utils.2010.csproj">
+    <ProjectReference Include="..\Utils\Utils.csproj">
       <Project>{e7d6707b-d6ef-4fa8-9374-dc3b7d3cdfd6}</Project>
-      <Name>Utils.2010</Name>
+      <Name>Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
